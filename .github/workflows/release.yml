@@ -38,7 +38,7 @@ jobs:
           echo "version=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
       - name: scanner tags
         id: ms
-        uses: docker/metadata-action@c299e40c65443455700f0fdfc63efafe5b349051 # v5
+        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
         with:
           images: ${{ steps.n.outputs.scanner }}
           tags: |
@@ -48,7 +48,7 @@ jobs:
             type=sha
       - name: web tags
         id: mw
-        uses: docker/metadata-action@c299e40c65443455700f0fdfc63efafe5b349051 # v5
+        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
         with:
           images: ${{ steps.n.outputs.web }}
           tags: |
